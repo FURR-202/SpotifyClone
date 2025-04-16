@@ -1,0 +1,128 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.container-fluid{
+    height: 100%;
+    background-color: #00072d;
+}
+header{
+    height: 90px;
+    width: 100%;
+    color: #f4f4ed;
+    background-color:  #001c55; 
+}
+nav{
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+nav img{
+    height: 50px;
+    width: 50px;
+    margin-left: 50px;
+}
+a{
+    color:#f4f4ed;
+    text-decoration: none;
+}
+li{
+    margin-left: 50px;
+    list-style-type: none;
+}
+ul{
+    display: flex;  
+    margin-right: 200px;
+    margin-left: 150px;
+}
+.drop-down{
+    transition: all 1s;
+    height: 300px;
+    width: 280px;
+    background-color: #98c1d9;
+    position: absolute;
+    margin-left: 210px;
+    border-radius: 4px;
+    bottom: 50%;
+    display: none;
+    
+}
+#Product-drop-down{
+    margin-left: 350px;
+}
+.drop-down p{
+    font-size: small;
+}
+.fa-angle-down{
+    color:#f4f4ed;
+    margin: 8px 0px 0px 8px;
+    font-size: smaller;
+    cursor: pointer;
+}
+main{
+    height: 86%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#TotalMoney{
+    height: 200px;
+    width: 200px;
+    background-color: #f4f4ed;
+    border-radius: 30%;
+    font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+#TotalMoney p{
+font-size: x-large;
+}
+#record-box{
+    margin-top: 14px;
+    height: 380px;
+    width: 870px;
+    border: 2px solid #f4f4ed;
+    display: flex;
+}
+.records{
+    height: 100%;
+    width: 290px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.details-box{
+    height: 50px;
+    width: 97%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    background-color: #99d98c;
+    padding: 0px 9px 0px 9px;
+    border-radius: 5px;
+}
+.btn-success{
+    position: absolute;
+    bottom: 57%;
+    left: 22%;
+}
+#input-box{
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    border: 2px solid aqua;
+    left: 1%;
+    margin-top: 35px;
+}
+
