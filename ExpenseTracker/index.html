@@ -13,6 +13,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="container" style="display: none;">
+        <input id="userMoney" placeholder="Enter Amount You have">
+        <button type="button" onclick="func()" class="btn btn-dark">Enter</button>
+    </div>
     <div class="container-fluid">
         <header>
             <nav>
@@ -32,7 +36,8 @@
                     <label class="form-check-label" for="switchCheckChecked">Dark Mode</label>
                   </div>
             </nav>
-          
+            <button type="button" id="clear" onclick="Clear()">Clear All</button>
+
         </header>
         <div class="drop-down" id="Features-drop-down">
             <h6> Expense</h6>
@@ -52,17 +57,22 @@
         </div>
         <main>
             <div id="TotalMoney">
-                <p>Money you have</p>
-                <h1>₹8000</h1>
+                <p>Money left</p>
             </div>
-            <button type="button" class="btn btn-success">Add Expense</button>
-            <div id="input-box">
+            <button type="button" class="btn btn-danger">Add Expense</button>
+            <button type="button" class="btn btn-success" >Add Profit</button>
+            <div class="box" id="input-box">
                 <input type="text" id="Expense-name" placeholder="Enter expense">
                 <input type="number" id="amount" placeholder="Enter amount">
-                <button type="button" class="btn btn-warning" onclick="checkInput()">Add</button>
+                <button type="button" class="btn btn-warning" >Add</button>
+            </div>
+            <div class="box" id="Profit-input-box">
+                <input type="text" id="Profit-name" placeholder="Enter Profit">
+                <input type="number" id="profitAmount" placeholder="Enter amount">
+                <button type="button" class="btn btn-info">Add</button>
             </div>
             <div id="record-box">
-                <div class="records" id="records1"><div class="details-box"><p>Food</p><h6>Amount</h6></div></div>
+                <div class="records" id="records1"></div>
                 <div class="records" id="records2"></div>
                 <div class="records" id="records3"></div>
             </div>

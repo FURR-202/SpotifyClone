@@ -5,9 +5,23 @@
 html,body{
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 500px;
+}
+.container input{
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    padding: 10px;
 }
 .container-fluid{
     height: 100%;
+    width: 100%;
     background-color: #00072d;
 }
 header{
@@ -91,38 +105,64 @@ font-size: x-large;
     margin-top: 14px;
     height: 380px;
     width: 870px;
-    border: 2px solid #f4f4ed;
     display: flex;
 }
 .records{
     height: 100%;
     width: 290px;
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .details-box{
-    height: 50px;
+    transition: all 1s;
+    height: 48px;
     width: 97%;
-    border: 2px solid black;
     display: flex;
     justify-content: space-between;
-    background-color: #99d98c;
-    padding: 0px 9px 0px 9px;
+    padding: 4px 9px 0px 9px;
     border-radius: 5px;
+    color: white;
 }
-.btn-success{
+.details-box h6{
+    font-weight: bolder;
+    font-size: 1rem;
+}
+main .btn{
     position: absolute;
     bottom: 57%;
+}
+.btn-danger{
     left: 22%;
 }
-#input-box{
+.btn-success{
+    right: 22%;
+}
+.box{
+    transition: all 1s;
     position: absolute;
-    height: 200px;
     width: 300px;
-    border: 2px solid aqua;
     left: 1%;
-    margin-top: 35px;
+    margin-bottom: 40px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+.box input{
+    height: 40px;
+    width: 250px;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
+.box button{
+    position: relative;
+    width: 250px;
+}
+#Profit-input-box{
+    left: 80%;
+   
+}
