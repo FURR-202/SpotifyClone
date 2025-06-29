@@ -2,7 +2,7 @@ let playlistBox = document.getElementById("playlist-box");
 let artistBox = document.getElementById("artist-box");
 let playlistBtn = document.getElementById("playlist");
 let artistBtn = document.getElementById("artist");
-let expandLibraryBtn = document.getElementById("expand-library");
+let expandLibraryBtn = document.getElementById("expand-library");// expand library button
 let songListBox = document.querySelector(".song-list-container");
 let artist = document.querySelector(".artist");
 let cover = document.getElementById("cover")
@@ -34,7 +34,7 @@ let N = [
  ]
 
 
- document.querySelector("nav").addEventListener("click",()=>{
+ const home = ()=>{
     if(sm){
         sm.style.display = "none";
     }
@@ -42,15 +42,12 @@ let N = [
         NFsongListBox.style.display = "none"
     }
     box.style.display = "flex"
+ }
+ document.querySelector("nav").addEventListener("click",()=>{
+    home();
  })
  cover.addEventListener("click",()=>{
-    if(sm){
-        sm.style.display = "none";
-    }
-    if(NFsongListBox){
-        NFsongListBox.style.display = "none"
-    }
-    box.style.display = "flex"
+    home();
  })
 
  const createVideo = (source)=>{
@@ -221,7 +218,8 @@ let player = document.querySelector(".playing-btns");
 let playBtn = document.querySelector(".play");
 let startTime = document.querySelector("#starting-time");
 let endTime = document.querySelector("#end-time");
-let range = document.querySelector("input");
+let playerBox = document.querySelector("#player");
+let range = playerBox.querySelector("input");
 
 let time;
 let interval;
@@ -251,12 +249,10 @@ const updateTime = ()=>{
 }
 audioElement.addEventListener("ended",()=>{
         clearInterval(interval);//stop from playing
-        playBtn.querySelector("i").classList.remove("fa-pause");
-        playBtn.querySelector("i").classList.add("fa-play");
         audioElement.currentTime = 0;// make current time 0
         range.value = 0;// seek bar should also get back to its place
         startTime.innerText =`0:00`// span tag also be in placed 
-        gif.style.display = "none";
+        playnext();
 })
 
 //Continously calling function 
@@ -295,4 +291,54 @@ const change = ()=>{
     audioElement.currentTime = range.value; // current time got the value of range and starts playing from there
     updateTime();// this updates the time accordingly 
 }
-
+// styling input and search icon
+let nav = document.querySelector("nav");
+let input = nav.querySelector("input");
+let Search = nav.querySelector(".fa-magnifying-glass")
+input.addEventListener("mouseenter",()=>{
+    input.style.transition = "all 0.2s";
+    input.style.backgroundColor = "#343a40";
+    input.style.color = "whitesmoke";
+    Search.style.color = "whitesmoke";
+    Search.style.transition = "all 0.2s";   
+    Search.style.backgroundColor = "#343a40";
+})
+input.addEventListener("mouseleave",()=>{
+    input.style.transition = "all 0.2s";
+    input.style.backgroundColor = "#1d2227";
+    input.style.color = "#adb5bd";
+    Search.style.color = "#adb5bd";
+    Search.style.transition = "all 0.2s";   
+    Search.style.backgroundColor = "#1d2227";
+    input.style.border = "none";
+    Search.style.border = "none";
+})
+input.addEventListener("click",()=>{
+    input.style.transition = "all 0.1s";
+    Search.style.transition = "all 0.1s";  
+    input.style.border = "2px solid whitesmoke";
+    input.style.borderLeft = "none";
+    Search.style.border = "2px solid whitesmoke";
+    Search.style.borderRight = "none";
+   
+})
+// styling install app button 
+let installapp = document.getElementById("appInstall");
+let InstallIcon = installapp.querySelector(".fa-circle-down");
+let InstallText = installapp.querySelector("p");
+installapp.addEventListener("mouseenter",()=>{
+    InstallIcon.style.transition = "transform 0.1s";
+    InstallText.style.transition = "transform 0.1s";
+    installapp.style.transition = "all 0.1s";
+    installapp.style.transform = "scale(1.05)";
+    InstallIcon.style.color = "#FFFFFF";
+    InstallText.style.color = "#FFFFFF";
+})
+installapp.addEventListener("mouseleave",()=>{
+    InstallIcon.style.transition = "transform 0.1s";
+    InstallText.style.transition = "transform 0.1s";
+     installapp.style.transition = "all 0.1s";
+    installapp.style.transform = "scale(1)";
+    InstallIcon.style.color = "#adb5bd";
+    InstallText.style.color = "#adb5bd";
+})

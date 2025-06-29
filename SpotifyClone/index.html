@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
+    <link rel="icon" type="image/png" href="https://static.vecteezy.com/system/resources/previews/042/148/631/non_2x/spotify-logo-spotify-social-media-icon-free-png.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,20 +13,40 @@
     
 </head>
 <body>
+    <!-- navigation bar -->
     <nav class="flex-centre">
         <img src="https://static.vecteezy.com/system/resources/previews/042/148/631/non_2x/spotify-logo-spotify-social-media-icon-free-png.png">
-    </nav>
-    <main>
-        <div class="flex-centre">
-       <section class="playlist-container">
-        <div class="head flex-centre">
-            <p>Your Library</p>
-            <i id="expand-library" onclick="expandLibrary()" class="fa-solid fa-up-right-and-down-left-from-center"></i>
+        <div style="margin-left: 390px; margin-right:90px;" class="flex-centre">
+        <i class="fa-solid fa-house" onclick="home()"></i>
+        <i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder=" What do you want to listen to?">
         </div>
+        <div class="btn-box">
+            <button id="Premium"><h5>Explore Premium</h5></button>
+            <button id="appInstall" ><i class="fa-solid fa-circle-down"></i><p>Install App</p></button>
+        </div>
+        <i class="fa-solid fa-bell"></i>
+        <i  class="fa-solid fa-people-group"></i>
+        <div id="profile" class="flex-centre">
+            <i class="fa-solid fa-diamond"><i class="fa-solid fa-question"></i></i>
+        </div> 
+    </nav>
+    <!-- main content -->
+    <main>
+        <!-- box -->
+        <div class="flex-centre">
+            <!-- first container -->
+       <section class="playlist-container">
+        <!-- head of first section -->
+            <div class="head flex-centre">
+                <p>Your Library</p>
+                <i id="expand-library" onclick="expandLibrary()" class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+        <!-- buttons for playlists and artists -->
         <div class="btn-box">
             <button id="playlist" onclick="DisplayPlaylistBox()"><p>Playlists</p></button>
             <button id="artist" onclick="DisplayArtistBox()"><p>Artists</p></button>
         </div>
+
         <div id="playlist-box" class="PA-box custom-scrollBar">
             <div class="P liked"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8470d229cb865e8d81cdce0889" alt="likedSong">
                 <div><p>Liked songs</p><p class="artist-name">🩷</p></div>
@@ -45,7 +66,6 @@
             <div class="P overwhelm"><img src="https://i1.sndcdn.com/artworks-4cZH6iE853aB-0-t500x500.jpg" alt="song">
                 <div><p>overwhelm</p><p class="artist-name">Ryan Mack</p></div>
             </div>
-            
         </div>
         <div id="artist-box" class="PA-box custom-scrollBar" >
             <div class="P kendrick"><img src="https://s3.amazonaws.com/cms.ipressroom.com/173/files/20183/5ae0f0b22cfac2028d000792_Kendrick+Lamar+album+cover/Kendrick+Lamar+album+cover_192264d8-68fe-4865-bf4f-45e2d3c0e4b0-prv.jpg" alt="kendrick">
@@ -73,6 +93,7 @@
         <div id="box">
             <div class="P liked"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8470d229cb865e8d81cdce0889" alt="likedSong">
                 <div><p>Liked songs</p><p class="artist-name">🩷</p></div>
+                <video autoplay loop muted><source src="https://tenor.com/bASK9.gif"></video>
             </div>
             <div class="P N" onclick="func(s)"><img src="https://i.scdn.co/image/ab67616d0000b273d65e2670b7176415b9d88a59" alt="N">
                 <div><p>न</p><p class="artist-name">Seedhe Maut</p></div>
@@ -169,8 +190,10 @@
             <span id="end-time">4:47</span>  <!--Song Range-->
             </div>
             <div id="faltubtns">
-                <i class="fa-solid fa-file-audio"></i><!--AUDIO-->
-                <i class="fa-solid fa-volume-high"></i><!--Lyrics-->
+                <i class="fa-solid fa-file-audio"></i><!--player-->
+                <i class="fa-solid fa-music"></i><!--Lyrics-->
+                <i class="fa-solid fa-volume-high"></i><!--volume-->
+                <input type="range" class="volume" min="0" max="100" value="100" oninput="volumeChange()">
             </div>
         </div>
     </main>
