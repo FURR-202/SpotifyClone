@@ -18,6 +18,7 @@ let NFsongListBox = document.querySelector(".NF-songs-list");
 let box = document.getElementById("box");
 let n = playlistBox.querySelector(".NF");
 let s = playlistBox.querySelector(".N");
+
 let N = [
     {name:"NAMASTUTE",path:"../songs/Seedhe Maut - Namastute.mp3",cover:"../songs/SHAKTI.mp4",artistName:"Seedhe Maut"},
     {name:"Naamcheen",path:"../songs/Seedhe Maut - Naamcheen.mp3",cover:"../songs/SHAKTI.mp4",artistName:"Seedhe Maut"},
@@ -33,7 +34,8 @@ let N = [
      {name:"Hate myself",path:"../songs/NF - Hate Myself (Audio).mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"NF"},
  ]
 
-
+const BY_DEFAULT = NF[0];
+audioElement.src = BY_DEFAULT.path;
  const home = ()=>{
     if(sm){
         sm.style.display = "none";

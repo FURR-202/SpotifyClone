@@ -308,7 +308,6 @@ li .fa-play{
     display: flex;
     align-items: center;
     padding: 20px;
-    justify-content: space-between;
 }
 .song-details-smallbox{
     height: 80px;
@@ -343,6 +342,7 @@ li .fa-play{
 }
 .playing-btns{
     position: relative;
+    margin-left: 280px;
 }
 .playing-btns div{
     display: flex;
@@ -390,24 +390,6 @@ input[type="range"]{
     width: 460px;
     border-radius: 10px;
     margin: 80px 9px 3px 9px;
-}
-
-#faltubtns{
-    height: 100px;
-    background-color: red;
-    width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#faltubtns i{
-    color: #adb5bd;
-    margin-left: 10px;
-
-}
-#faltubtns i:hover{
-    transition: all 0.1s;
-    color: white; 
 }
 
 
@@ -535,28 +517,4 @@ width: 550px;
 }
 .fa-question:hover{
     color: #D397F8;
-}
-/* player volume range */
-.volume-box{
-    height: 40px;
-    width: 100px;
-}
-.volume{
-    all: unset;
-    height: 2px;
-    width: 70px;
-}
-.volume::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    /* height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    cursor: pointer; */
-}
-.volume::-webkit-slider-runnable-track{
-    background-color: #43484d;
-    height: 2px;
-    border-radius: 10px;
-    width: 70px;
 }
