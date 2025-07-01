@@ -3,3 +3,4 @@
 - I gave transition while switching from one playlist to another which gaves smooth effect. 
 - I gave the playing songs functioning as well.
 - Hope playlist is functioning. I added songs in this playlist.
+- Clicking on header redirect us to homepage no matter which playlist we have open
