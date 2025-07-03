@@ -20,18 +20,18 @@ let n = playlistBox.querySelector(".NF");
 let s = playlistBox.querySelector(".N");
 
 let N = [
-    {name:"NAMASTUTE",path:"../songs/Seedhe Maut - Namastute.mp3",cover:"../songs/SHAKTI.mp4",artistName:"Seedhe Maut"},
-    {name:"Naamcheen",path:"../songs/Seedhe Maut - Naamcheen.mp3",cover:"../songs/SHAKTI.mp4",artistName:"Seedhe Maut"},
-    {name:"Gandi aulad",path:"../songs/GandiAulad.mp3",cover:"https://images.genius.com/67b32746962542c64470f0f441e75ab3.1000x1000x1.jpg",artistName:"Seedhe Maut"},
-    {name:"Nanchaku",path:"../songs/Nanchaku.mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"Seedhe Maut"},
-    {name:"Natkhat",path:"../songs/Natkhat.mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"Seedhe Maut"},
+    {name:"NAMASTUTE",path:"./Seedhe Maut - Namastute.mp3",cover:"./SHAKTI.mp4",artistName:"Seedhe Maut"},
+    {name:"Naamcheen",path:"./Seedhe Maut - Naamcheen.mp3",cover:"./SHAKTI.mp4",artistName:"Seedhe Maut"},
+    {name:"Gandi aulad",path:"./GandiAulad.mp3",cover:"https://images.genius.com/67b32746962542c64470f0f441e75ab3.1000x1000x1.jpg",artistName:"Seedhe Maut"},
+    {name:"Nanchaku",path:"./Nanchaku.mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"Seedhe Maut"},
+    {name:"Natkhat",path:"./Natkhat.mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"Seedhe Maut"},
  ]
  let NF = [
-     {name:"HAPPY",path:"../songs/NF - HAPPY (Lyrics).mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"NF"},
-     {name:"Hope",path:"../songs/NF - HOPE.mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"NF"},
-     {name:"The Search",path:"../songs/NF - The Search.mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"NF"},
-     {name:"Time",path:"../songs/NF - Time.mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"NF"},
-     {name:"Hate myself",path:"../songs/NF - Hate Myself (Audio).mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"NF"},
+     {name:"HAPPY",path:"./NF - HAPPY (Lyrics).mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"NF"},
+     {name:"Hope",path:"./NF - HOPE.mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"NF"},
+     {name:"The Search",path:"./NF - The Search.mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"NF"},
+     {name:"Time",path:"./NF - Time.mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"NF"},
+     {name:"Hate myself",path:"./NF - Hate Myself (Audio).mp3",cover:"https://upload.wikimedia.org/wikipedia/en/8/84/NF_-_Hope.png",artistName:"NF"},
  ]
 
 const BY_DEFAULT = NF[0];
@@ -81,8 +81,8 @@ const func = (ele)=>{
         if(img){
             cover.removeChild(img);
         }
-        createVideo("../songs/SHAKTI.mp4")
-        audioElement.src = "../songs/Seedhe Maut - Namastute.mp3"
+        createVideo("./SHAKTI.mp4")
+        audioElement.src = "./Seedhe Maut - Namastute.mp3"
         songName.innerText = playlist[0].name;
         artist.innerText = playlist[0].artistName;
         playBoxArtist.innerText = playlist[0].artistName;
@@ -103,7 +103,7 @@ const func = (ele)=>{
             cover.removeChild(img);
         }
         createVideo("https://v1.pinimg.com/videos/mc/720p/a7/59/b8/a759b8e42dfe66eb26c53a73437e9397.mp4");
-        audioElement.src = "../songs/NF - HAPPY (Lyrics).mp3"
+        audioElement.src = "./NF - HAPPY (Lyrics).mp3"
         songName.innerText = playlist[0].name;
         artist.innerText = playlist[0].artistName;
         playBoxArtist.innerText = playlist[0].artistName;
